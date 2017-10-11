@@ -1,0 +1,308 @@
+// 引用base
+@import url(base.less);
+@import url(adapter.less);
+
+//首页头部
+.mmm_head {
+  height: 98/50rem;
+  background-color: #ff841d;
+  position: relative;
+  .left {
+    width: 373/50rem;
+    height: 53/50rem;
+    background: url(../images/header_logo.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    left: 32/50rem;
+
+  }
+  .right {
+    width: 70/50rem;
+    height: 68/50rem;
+    background: url(../images/header_app.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    right: 14/50rem;
+
+  }
+}
+
+//搜索
+.mmm_search {
+  height: 102/50rem;
+  text-align: center;
+  background-color: #fff;
+
+  .ipt1 {
+    width: 570/50rem;
+    height: 60/50rem;
+    line-height: 60/50rem;
+    background-color: #f1f1f1;
+    border-radius: 30/50rem;
+    margin-top: 22/50rem;
+    text-indent: 38/50rem;
+    outline: none;
+  }
+  .ipt2 {
+    width: 128/50rem;
+    height: 60/50rem;
+    border-radius: 30/50rem;
+    color: #fff;
+    background-color: #ff841d;
+    outline: none;
+  }
+}
+
+
+//中间电视列表
+.tvItems{
+  h3{
+    padding-left:0.4rem;
+    font-size:14px;
+    line-height: 1.44rem;
+    color: #874604;
+    border-top:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+  }
+  .tvWrap{
+    li{
+      background-color: #fff;
+      border-bottom:1px solid #e7e7e7;
+      padding:0.4rem;
+      position: relative;
+      .clearfix();
+      a{
+        display: block;
+        .num{
+          .fl();
+          background-color: #c9c9c9;
+          font-size:14px;
+          width:0.8rem;
+          height:0.8rem;
+          line-height: 0.8rem;
+          text-align: center;
+          color: #fff;
+          margin-right:0.4rem;
+        }
+
+        //以下是三个自定义的类名（通过模板渲染），用来加三个特殊样式用的
+        .index0{
+          background-color:#f10e0e;
+        }
+        .index1{
+          background-color: #ff9314;
+        }
+        .index2{
+          background-color: #8adf5b;
+        }
+
+
+        .top{
+          color: #000;
+          width: 100%;
+        }
+        .bottom{
+          color: #999;
+          margin-top:3px;
+          font-size:14px;
+          width: 100%;
+        }
+        img{
+          position: absolute;
+          width:1rem;
+          height:36/50rem;
+
+          right:12/50rem;
+          top:46/50rem;
+        }
+
+      }
+    }
+  }
+}
+
+//排行
+.rank{
+  h3{
+    padding-left:0.4rem;
+    font-size:14px;
+    line-height: 1.44rem;
+    color: #874604;
+    border-top:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+  }
+  li{
+    padding: 0.56rem 0.32rem;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    .clearfix();
+    .pic{
+      .fl();
+      margin-right:0.4rem;
+      img {
+        width:4rem;
+        height:4rem;
+      }
+    }
+    .info{
+      font-size: 14px;
+      line-height: 0.96rem;
+      .price{
+        //.clearfix();
+        overflow: hidden;
+        color: #ed0000;
+        font-size: 18px;
+        img{
+          .fr();
+          width: 4.6rem;
+          height: 0.8rem;
+          vertical-align: middle;
+        }
+      }
+      .comment{
+        color: #a1a1a1;
+        font-size: 12px;
+        .pri{
+          margin-right:0.4rem;
+        }
+
+      }
+    }
+  }
+}
+
+//评论
+.commentPart{
+  h3{
+    padding-left:0.4rem;
+    font-size:14px;
+    line-height: 1.44rem;
+    color: #874604;
+    border-top:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+  }
+  .title{
+    background-color: #fff;
+    .clearfix();
+    margin-bottom:0.4rem;
+    .pic{
+      .fl();
+      margin-right:0.4rem;
+      img{
+        width:4rem;
+        height:4rem;
+      }
+    }
+    .txt{
+      font-size:14px;
+      line-height: 0.88rem;
+      color: #999;
+    }
+  }
+  .body{
+    background-color: #f8f8f8;
+    padding: 0.4rem;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left:1.16rem;
+      top:-0.32rem;
+      width:0;
+      height:0;
+      border-bottom:0.32rem solid #ccc;
+      border-left: 0.28rem solid transparent;
+      border-right: 0.28rem solid transparent;
+    }
+    .top{
+      position: relative;
+      img{
+        width:3.6rem;
+        height:0.6rem;
+        vertical-align: middle;
+        display: inline-block;
+        margin-left:5px;
+      }
+      span{
+        display: inline-block;
+      }
+      .time{
+        position: absolute;
+        right:0;
+        top:0;
+      }
+    }
+    .bottomTxt{
+      color: #000000;
+      margin-top: 0.4rem;
+      line-height: 0.88rem;
+      font-size: 15px;
+      word-break: break-all;
+    }
+  }
+}
+
+
+
+//尾部
+.foot {
+  height: 243/50rem;
+  .foot_login {
+    height: 66/50rem;
+    margin-top: 50/50rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+    a {
+      display: block;
+      width: 100%;
+      line-height: 66/50rem;
+      text-align: center;
+    }
+    .register {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .login {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .back {
+      width: 40%;
+      height: 67/50rem;
+      .fl();
+      box-sizing: border-box;
+      position: relative;
+      img {
+        width: 28/50rem;
+        height: 29/50rem;
+        .center-y();
+        left: 80/50rem;
+
+      }
+    }
+  }
+  .baseline {
+    height: 124/50rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 34/50rem;
+    padding-bottom: 34/50rem;
+    .download {
+      color: red;
+    }
+    .phone {
+      color: #000;
+    }
+    span {
+      color: #ccc;
+    }
+  }
+}

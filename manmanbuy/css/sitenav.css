@@ -1,0 +1,428 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+  background-color: #F7F7F7;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 21.33px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 26.67px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 27.6px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 28.27px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+/*设置文字大小(防止页面加载进入的时候字体大小变化很大，所以文字的容器一定要是下面这些元素)*/
+[data-dpr="1"] p,
+[data-dpr="1"] i,
+[data-dpr="1"] span,
+[data-dpr="1"] label,
+[data-dpr="1"] b,
+[data-dpr="1"] a,
+[data-dpr="1"] button,
+[data-dpr="1"] input::-webkit-input-placeholder,
+[data-dpr="1"] textarea::-webkit-input-placeholder {
+  font-size: 12px;
+}
+/* dpr = 1 */
+[data-dpr="2"] p,
+[data-dpr="2"] i,
+[data-dpr="2"] span,
+[data-dpr="2"] label,
+[data-dpr="2"] b,
+[data-dpr="2"] a,
+[data-dpr="2"] button,
+[data-dpr="2"] input::-webkit-input-placeholder,
+[data-dpr="2"] textarea::-webkit-input-placeholder {
+  font-size: 24px;
+}
+/* dpr = 2 */
+[data-dpr="3"] p,
+[data-dpr="3"] i,
+[data-dpr="3"] span,
+[data-dpr="3"] label,
+[data-dpr="3"] b,
+[data-dpr="3"] a,
+[data-dpr="3"] button,
+[data-dpr="3"] input::-webkit-input-placeholder,
+[data-dpr="3"] textarea::-webkit-input-placeholder {
+  font-size: 36px;
+}
+/* dpr = 3 */
+[data-dpr="1"] h3 {
+  font-size: 12px;
+}
+/* dpr = 1 */
+[data-dpr="2"] h3 {
+  font-size: 26px;
+}
+/* dpr = 2 */
+[data-dpr="3"] h3 {
+  font-size: 38px;
+}
+/* dpr = 3 */
+[data-dpr="1"] h2 {
+  font-size: 14px;
+}
+/* dpr = 1 */
+[data-dpr="2"] h2 {
+  font-size: 28px;
+}
+/* dpr = 2 */
+[data-dpr="3"] h2 {
+  font-size: 40px;
+}
+/* dpr = 3 */
+[data-dpr="1"] h1 {
+  font-size: 16px;
+}
+/* dpr = 1 */
+[data-dpr="2"] h1 {
+  font-size: 30px;
+}
+/* dpr = 2 */
+[data-dpr="3"] h1 {
+  font-size: 42px;
+}
+/* dpr = 3 */
+.head {
+  height: 1.96rem;
+  width: 100%;
+  background-color: #ff841d;
+  position: relative;
+}
+.head .left {
+  float: left;
+  padding: 0.66rem;
+}
+.head .left img {
+  display: block;
+  width: 0.64rem;
+}
+.head .right {
+  float: right;
+  padding: 0.34rem;
+}
+.head .right img {
+  width: 1.28rem;
+}
+.head .center {
+  overflow: hidden;
+  height: 1.96rem;
+  line-height: 1.96rem;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.navItem ul {
+  zoom: 1;
+  padding: 0.6rem;
+}
+.navItem ul:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.navItem ul li {
+  float: left;
+  margin: 0 0 0.2rem 0.2rem;
+  text-align: center;
+  padding: 0.4rem 0.32rem;
+  background-color: #f4f4f4;
+  border: 1px solid #bfbfbf;
+}
+.navItem ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.navItem ul li a img {
+  vertical-align: middle;
+  width: 0.64rem;
+  height: 0.64rem;
+  display: inline-block;
+}
+.navItem ul li a p {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-size: 16px;
+}
+.foot {
+  height: 4.86rem;
+}
+.foot .foot_login {
+  height: 1.32rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.foot .foot_login a {
+  display: block;
+  width: 100%;
+  line-height: 1.32rem;
+  text-align: center;
+}
+.foot .foot_login .register {
+  width: 30%;
+  height: 1.34rem;
+  border-right: 1px solid #ccc;
+  float: left;
+  box-sizing: border-box;
+}
+.foot .foot_login .login {
+  width: 30%;
+  height: 1.34rem;
+  border-right: 1px solid #ccc;
+  float: left;
+  box-sizing: border-box;
+}
+.foot .foot_login .back {
+  width: 40%;
+  height: 1.34rem;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+}
+.foot .foot_login .back img {
+  width: 0.56rem;
+  height: 0.58rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.2rem;
+}
+.foot .baseline {
+  background-color: #fff;
+  font-size: 14px;
+  height: 2.48rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 0.68rem;
+  padding-bottom: 0.68rem;
+}
+.foot .baseline .download {
+  color: red;
+}
+.foot .baseline .phone {
+  color: #000;
+}
+.foot .baseline span {
+  color: #ccc;
+}
+.foot .baseline p {
+  text-align: center;
+}

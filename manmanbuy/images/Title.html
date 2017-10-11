@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0169)file:///H:/js%E9%AB%98%E7%BA%A7%E7%AC%AC%E4%BA%94%E5%A4%A9/%E6%BA%90%E4%BB%A3%E7%A0%81/11-%E8%A7%A3%E5%86%B310%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var arr = [];//用于存放计算过的值
+  var count = 0;
+  
+  function fib(n) {
+    //每次计算前先判断 arr中是否存放有 要计算的值，如果有直接取出使用
+    if (arr[n]) {
+      return arr[n];
+    } else { //如果没有进行计算
+      count++;
+      var data = 0;
+      if (n <= 2) {
+        data = 1;
+      } else {
+        data = fib(n - 1) + fib(n - 2);
+      }
+      arr[n] = data; //如果算出的第n项的值，存储到arr数组中，方便下次使用
+      return data;
+    }
+  }
+  
+  fib(10)
+  
+  //          console.log(fib(10000));
+  //          console.log(count);
+  //        console.log(arr);
+  //        fib(99);
+  
+  //        f(100)=f(99)+f(98);
+  
+  //        count=0;
+  //        console.log(fib(99));
+  //        console.log(count);
+  
+  
+  //        console.log(fib(10000));
+  //
+  //        box.onclick=function(){  //回调函数
+  //
+  //        }
+  //
+  //        $(div).click(function(){....})
+  //
+  //        (function(){ //立即执行函数表达式   函数自调用
+  //
+  //        })()
+</script>
+
+</body></html>

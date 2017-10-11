@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/inlandproduct.css">
+</head>
+<body>
+
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="inlanddiscount.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2> 国内折扣 </h2></div>
+</header>
+
+<!--产品区域-->
+<section class="products">
+    <div class="box">
+
+    </div>
+</section>
+
+
+
+<!--面包屑导航-->
+<section class="bread">
+    <ul>
+        <li><a href="index.html">首页 ></a></li>
+        <li><a href="moneyctrl.html">超值推荐 > </a></li>
+        <li class="txt2"><a href="javascript:;">移动端凑单品：海天 鲜味 生抽 1.28L</a></li>
+    </ul>
+</section>
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+
+
+<!--产品模板-->
+<script type="text/template" id="tpl">
+    {{each result}}
+    <div class="title">
+        <h3>{{$value.productName}}</h3>
+
+        <div class="infos">
+            <span class="mall">{{$value.productFrom
+}}</span>
+            <span class="time">{{$value.productTime}}</span>
+            <span class="author">{{$value.productTips}}</span>
+
+        </div>
+    </div>
+    <div class="content">
+        <div class="spic">
+            {{#$value.productImg}}
+        </div>
+        <div class="txt">
+            {{$value.productInfo}}
+        </div>
+        <div class="lpic">
+            {{#$value.productImg}}
+        </div>
+    </div>
+
+    <div class="link">
+        <a href="">前往购买</a>
+    </div>
+    <div class="comment">
+        {{#$value.productComment}}
+    </div>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script><script src="js/inlandproduct.js"></script>
+</body>
+</html>

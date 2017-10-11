@@ -1,0 +1,138 @@
+// 引用base
+@import url(base.less);
+@import url(adapter.less);
+//头部
+.head {
+  height: 1.96rem;
+  width: 100%;
+  background-color: #ff841d;
+  position: relative;
+  .left {
+    .fl();
+    padding: 0.66rem;
+    img {
+      display: block;
+      width: 0.64rem;
+    }
+  }
+  .right {
+    .fr();
+    padding: 0.34rem;
+    img {
+      width: 1.28rem;
+    }
+  }
+  .center {
+    overflow: hidden;
+    height: 1.96rem;
+    line-height: 1.96rem;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+
+
+//中间商家
+.navItem{
+  ul{
+    .clearfix();
+    padding:0.6rem;
+    li{
+      .fl();
+      margin: 0 0 0.2rem 0.2rem;
+      text-align: center;
+      padding:0.4rem 0.32rem;
+      background-color: #f4f4f4;
+      border: 1px solid #bfbfbf;
+      a{
+        color: #000;
+        text-decoration: none;
+        img{
+          vertical-align: middle;
+          width:32/50rem;
+          height:32/50rem;
+          display: inline-block;
+        }
+        p{
+          display: inline-block;
+          margin-left:0.2rem;
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+//尾部
+.foot {
+  height: 243/50rem;
+  .foot_login {
+    height: 66/50rem;
+    margin-top: 50/50rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+    a {
+      display: block;
+      width: 100%;
+      line-height: 66/50rem;
+      text-align: center;
+    }
+    .register {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .login {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .back {
+      width: 40%;
+      height: 67/50rem;
+      .fl();
+      box-sizing: border-box;
+      position: relative;
+      img {
+        width: 28/50rem;
+        height: 29/50rem;
+        .center-y();
+        left: 60/50rem;
+
+      }
+    }
+  }
+  .baseline {
+    background-color: #fff;
+    font-size: 14px;
+    height: 124/50rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 34/50rem;
+    padding-bottom: 34/50rem;
+    .download {
+      color: red;
+    }
+    .phone {
+      color: #000;
+    }
+    span {
+      color: #ccc;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

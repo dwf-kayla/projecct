@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 海淘折扣 </title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/haitao.css">
+</head>
+<body>
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="index.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2>海淘折扣</h2></div>
+</header>
+
+
+<!--产品区域-->
+<section class="moneyItem">
+    <ul>
+        <!--<li>-->
+        <!--<a href="moneyproduct.html?productid=20">-->
+        <!--<div class="pic">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--<div class="info">-->
+        <!--<p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>-->
+        <!--<div class="other">-->
+        <!--<span class="time">京东商城|10-25 14:10</span>-->
+        <!--<span class="comment"><i class="icon"></i>有1人评论</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</li>-->
+    </ul>
+</section>
+<!--分页-->
+<section class="page">
+    <div class="prev item"><a href="javascript:;">上一页</a></div>
+    <div class="center item">
+        <select>
+            <!--<option value="1">1 / 15</option>-->
+            <!--<option value="2">2 / 15</option>-->
+            <!--<option value="3">3 / 15</option>-->
+            <!--<option value="4">4 / 15</option>-->
+            <!--<option value="5">5 / 15</option>-->
+            <!--<option value="6">6 / 15</option>-->
+            <!--<option value="7">7 / 15</option>-->
+            <!--<option value="8">8 / 15</option>-->
+            <!--<option value="9">9 / 15</option>-->
+            <!--<option value="10">10 / 15</option>-->
+            <!--<option value="11">11 / 15</option>-->
+            <!--<option value="12">12 / 15</option>-->
+            <!--<option value="13">13 / 15</option>-->
+            <!--<option value="14">14 / 15</option>-->
+            <!--<option value="15">15 / 15</option>-->
+        </select>
+    </div>
+    <div class="next item"><a href="javascript:;">下一页</a></div>
+
+</section>
+
+
+<!--底部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+
+
+<!--产品区域模板-->
+<script type="text/template" id="tpl">
+    {{each result}}
+    <li>
+        <a href="moneyproduct.html?productid={{$value.productId}}">
+            <div class="pic">
+                {{#$value.productImgSm}}
+            </div>
+            <div class="info">
+                <p>{{$value.productName}}<span>{{$value.productPinkage}}</span></p>
+                <div class="other">
+                    <span class="time">{{$value.productFrom}}|{{$value.productTime}}</span>
+                    <span class="comment"><i class="icon"></i>{{$value.productComCount}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<!--分页模板-->
+<script type="text/template" id="pagetpl">
+    <select>
+        <%for(var i=1;i<=num;i++){%>
+        <%if(currentPage==i){%>
+        <option value='<%= i %>' selected> <%= i %> / <%= num %> </option>
+        <%}else{%>
+        <option value="<%=i %>" ><%= i %> / <%= num %></option>
+        <%}%>
+        <%}%>
+    </select>
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/haitao.js"></script>
+</body>
+</html>
