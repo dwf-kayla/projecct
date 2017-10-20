@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+<body>
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="index.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2> 国内折扣 </h2></div>
+</header>
+
+
+<!--产品区域-->
+<section class="products">
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<a href="">-->
+                <!--<div><img src="" alt=""></div>-->
+                <!--<div class="box">-->
+                    <!--<div class="txt">西域美农新疆特产五星和田红枣250g*2</div>-->
+                    <!--<div class="time">京东商城|10-22 13:28</div>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+</section>
+
+
+
+<!--产品模板-->
+<script type="text/template" id="tpl">
+    <ul>
+        {{each result}}
+        <li>
+            <a href="inlandproduct.html?productid={{$value.productId}}">
+                <div>{{#$value.productImg}}</div>
+                <div class="box">
+                    <div class="txt">{{$value.productName}}</div>
+                    <div class="time">{{$value.productFrom}}|{{$value.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script><script src="js/inlanddiscount.js"></script>
+</body>
+</html>

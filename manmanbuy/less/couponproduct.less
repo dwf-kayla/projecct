@@ -1,0 +1,149 @@
+// 引用base
+@import url(base.less);
+@import url(adapter.less);
+
+//头部
+.head {
+  height: 1.96rem;
+  width: 100%;
+  background-color: #f4483e;
+  position: relative;
+  .left {
+    .fl();
+    padding: 0.66rem;
+    img {
+      display: block;
+      width: 0.64rem;
+    }
+  }
+  .right {
+    .fr();
+    padding: 0.34rem;
+    img {
+      width: 1.28rem;
+    }
+  }
+  .center {
+    overflow: hidden;
+    height: 1.96rem;
+    line-height: 1.96rem;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+//中间产品
+.products{
+  h3{
+    margin:0.32rem 0;
+    text-align: center;
+    color: #999;
+    font-size:12px;
+  }
+  li{
+    border-bottom:1px solid #e7e7e7;
+    padding: 0.4rem;
+    overflow: hidden;
+    .pic{
+      .fl();
+      width:4rem;
+      margin-right:0.4rem;
+      img{
+        width:4rem;
+      }
+    }
+    .info{
+      .txt{
+        font-size:16px;
+        color: #333;
+        line-height: 1rem;
+      }
+      .money{
+        .clearfix();
+        margin:0.2rem 0;
+        font-size:16px;
+        min-height: 0.64rem;
+        font-weight:bold;
+        img{
+          width:1.2rem;
+          height:1.2rem;
+          .fr();
+        }
+      }
+      .time{
+        color: #EE7700;
+        font-size:12px;
+        margin-top:0.4rem;
+      }
+    }
+  }
+}
+
+
+//尾部
+.foot {
+  height: 243/50rem;
+  .foot_login {
+    height: 66/50rem;
+    margin-top: 50/50rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+    a {
+      display: block;
+      width: 100%;
+      line-height: 66/50rem;
+      text-align: center;
+    }
+    .register {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .login {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .back {
+      width: 40%;
+      height: 67/50rem;
+      .fl();
+      box-sizing: border-box;
+      position: relative;
+      img {
+        width: 28/50rem;
+        height: 29/50rem;
+        .center-y();
+        left: 60/50rem;
+
+      }
+    }
+  }
+  .baseline {
+    background-color: #fff;
+    font-size: 14px;
+    height: 124/50rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 34/50rem;
+    padding-bottom: 34/50rem;
+    .download {
+      color: red;
+    }
+    .phone {
+      color: #000;
+    }
+    span {
+      color: #ccc;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

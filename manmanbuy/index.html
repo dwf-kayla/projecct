@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--首页头部-->
+<header class="mmm_head">
+    <div class="left"></div>
+    <div class="right"></div>
+</header>
+<!--搜索-->
+<section class="mmm_search">
+    <input type="text" placeholder="请输入你想要比价的商品" class="ipt1">
+    <input type="button" value="搜索" class="ipt2">
+</section>
+<!--导航栏-->
+<section class="mmm_nav clearfix">
+    <div class="mmm_menu">
+        <ul class="clearfix">
+
+        </ul>
+    </div>
+</section>
+
+<!--超值推荐-->
+<section class="mmm_recommend">
+    <div class="rec_head">
+        <span>超值折扣推荐</span>
+        <img src="images/more.png" alt="">
+    </div>
+    <div class="rec_body">
+        <ul class="clearfix">
+
+        </ul>
+    </div>
+    <div class="more_dis">
+        <input type="button" value="更多优惠>>">
+    </div>
+    <div class="range">
+        <span>品牌排行</span>
+        <img src="images/more.png" alt="">
+    </div>
+</section>
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</section>
+
+<!--菜单模板-->
+<script type="text/template" id="menuTpl">
+    {{each result}}
+    <li class="menu-item">
+        <a href="{{$value.titlehref}}" data-indexmenuId="{{$value.indexmenuId}}">
+            {{#$value.img}}
+            <p>{{$value.name}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--折扣模板-->
+<script type="text/template" id="recomTpl">
+    {{each result}}
+    <li class="clearfix">
+        <a href="moneyproduct.html?productid={{$value.productId}}">
+            <div class="pic">
+                {{#$value.productImgSm}}
+            </div>
+            <div class="right">
+                <p>
+                    {{$value.productName}}
+                    <span>{{$value.productPinkage}}</span>
+                </p>
+                <div class="bottom">
+                    <span>{{$value.productFrom}}|{{$value.productTime}}</span>
+                    <span class="comment">
+                        <i class="icon-comment"></i>{{$value.productComCount}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script src="lib/artTemplate/art-template.js"></script></body>
+</html>

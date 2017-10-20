@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>肯德基优惠券</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="coupon.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2> 肯德基优惠券 </h2></div>
+</header>
+
+<!--中间产品-->
+<section class="products">
+    <h3>--点餐前出示手机中的优惠券，即可享受优惠--</h3>
+    <ul class="items">
+        <!--<li>-->
+            <!--<div class="pic">-->
+                <!--<img src="" alt="">-->
+            <!--</div>-->
+            <!--<div class="info">-->
+                <!--<div class="txt">C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</div>-->
+                <!--<div class="money">￥ 28-->
+                    <!--<img src="images/right.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="time">有效期至10月31日</div>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+</section>
+
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+
+<!--中间产品模板-->
+<script type="text/template" id="tpl">
+    {{each result}}
+    <li>
+        <div class="pic">
+           {{#$value.couponProductImg}}
+        </div>
+        <div class="info">
+            <div class="txt">{{$value.couponProductName}}</div>
+            <div class="money">{{$value.couponProductPrice}}
+                <img src="images/right.png" alt="">
+            </div>
+            <div class="time">{{$value.couponProductTime}}</div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/couponproduct.js"></script>
+</body>
+</html>

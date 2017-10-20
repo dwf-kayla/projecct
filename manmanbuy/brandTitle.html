@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌大全</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+<body>
+<!--首页头部-->
+<header class="mmm_head">
+    <div class="left"></div>
+    <div class="right"></div>
+</header>
+<!--搜索-->
+<section class="mmm_search">
+    <input type="text" placeholder="请输入你想要比价的商品" class="ipt1">
+    <input type="button" value="搜索" class="ipt2">
+</section>
+
+<!--中间产品-->
+<div class="brandItems">
+    <h3>热门品牌排行</h3>
+    <ul class="wrap">
+        <!--<li>-->
+        <!--<a href="brand.html?brandtitleid=0" data-title-id="0">平板电视十大品牌-->
+        <!--<img src="images/arrow.png" alt="">-->
+        <!--</a>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+<!--中间产品的模板-->
+<script type="text/template" id="tpl">
+    {{each result}}
+    <li>
+        <a href="brand.html?brandtitleid={{$value.brandTitleId}}" data-title-id="{{$value.brandTitleId}}">{{$value.brandTitle}}
+            <img src="images/arrow.png" alt="">
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</section>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/brandTitle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+// 引用base
+@import url(base.less);
+@import url(adapter.less);
+//首页头部
+.bj_head {
+  height: 98/50rem;
+  background-color: #ff841d;
+  position: relative;
+  .left {
+    width: 373/50rem;
+    height: 53/50rem;
+    background: url(../images/header_logo.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    left: 32/50rem;
+  }
+  .right {
+    width: 70/50rem;
+    height: 68/50rem;
+    background: url(../images/header_app.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    right: 14/50rem;
+
+  }
+}
+
+//搜索
+.bj_search {
+  height: 102/50rem;
+  text-align: center;
+  background-color: #fff;
+
+  .ipt1 {
+    width: 570/50rem;
+    height: 60/50rem;
+    line-height: 60/50rem;
+    background-color: #f1f1f1;
+    border-radius: 30/50rem;
+    margin-top: 22/50rem;
+    text-indent: 38/50rem;
+  }
+  .ipt2 {
+    width: 128/50rem;
+    height: 60/50rem;
+    border-radius: 30/50rem;
+    color: #fff;
+    background-color: #ff841d;
+  }
+}
+
+//商品区域
+.products {
+  //height: 1200/50rem;
+  background-color: #fff;
+
+  .title {
+    height: 80/50rem;
+    background-color: #ededed;
+    text-indent: 33/50rem;
+
+    a {
+      display: block;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      height: 80/50rem;
+      line-height: 80/50rem;
+      img {
+        .fr();
+        width: 28/50rem;
+        //line-height: 18/50rem;
+        //height:18/50rem;
+        margin-top: 30/50rem;
+        margin-right: 28/50rem;
+      }
+    }
+  }
+  .pro_intro {
+    //height: 328/50rem;
+    display: none;
+    ul {
+      width: 100%;
+      .clearfix();
+    }
+
+    li {
+      .fl();
+      width: 33%;
+      border-bottom: 1px solid #ccc;
+      border-right: 0.5px solid #ccc;
+      a {
+        color: #333;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        height: 80/50rem;
+        line-height: 80/50rem;
+      }
+
+    }
+  }
+
+}
+
+//尾部
+.foot {
+  height: 243/50rem;
+  .foot_login {
+    height: 66/50rem;
+    margin-top: 50/50rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+    a {
+      display: block;
+      width: 100%;
+      line-height: 66/50rem;
+      text-align: center;
+    }
+    .register {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .login {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .back {
+      width: 40%;
+      height: 67/50rem;
+      .fl();
+      box-sizing: border-box;
+      position: relative;
+      img {
+        width: 28/50rem;
+        height: 29/50rem;
+        .center-y();
+        left: 60/50rem;
+
+      }
+    }
+  }
+  .baseline {
+    background-color: #fff;
+    font-size: 14px;
+    height: 124/50rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 34/50rem;
+    padding-bottom: 34/50rem;
+    .download {
+      color: red;
+    }
+    .phone {
+      color: #000;
+    }
+    span {
+      color: #ccc;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+

@@ -1,0 +1,182 @@
+// 引用base
+@import url(base.less);
+@import url(adapter.less);
+//首页头部
+.bj_head {
+  height: 98/50rem;
+  background-color: #ff841d;
+  position: relative;
+  .left {
+    width: 373/50rem;
+    height: 53/50rem;
+    background: url(../images/header_logo.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    left: 32/50rem;
+  }
+  .right {
+    width: 70/50rem;
+    height: 68/50rem;
+    background: url(../images/header_app.png) 0 0 no-repeat;
+    .center-y();
+    .bgz();
+    right: 14/50rem;
+
+  }
+}
+//搜索
+.bj_search {
+  height: 102/50rem;
+  text-align: center;
+  background-color: #fff;
+
+  .ipt1 {
+    width: 570/50rem;
+    height: 60/50rem;
+    line-height: 60/50rem;
+    background-color: #f1f1f1;
+    border-radius: 30/50rem;
+    margin-top: 22/50rem;
+    text-indent: 38/50rem;
+  }
+  .ipt2 {
+    width: 128/50rem;
+    height: 60/50rem;
+    border-radius: 30/50rem;
+    color: #fff;
+    background-color: #ff841d;
+  }
+}
+
+//面包屑导航
+.breadNav{
+  height:77/50rem;
+  background-color: #5a5a5a;
+  width:100%;
+  padding-left:20/50rem;
+  ul{
+    .clearfix();
+  }
+  li{
+    .fl();
+    height:77/50rem;
+  }
+  a{
+    color: #fff;
+    display: block;
+    line-height: 77/50rem;
+    font-size:16px;
+  }
+}
+
+//产品区域
+.pros{
+  li{
+    padding:0.56rem 0.32rem;
+  }
+  .left{
+    .fl();
+  }
+   .left img{
+     width:4rem;
+   }
+  .right{
+    margin-left:5.2rem;
+    .item1{
+      line-height: 1rem;
+      margin-bottom:0.2rem;
+      color: #000;
+    }
+    .price{
+      font-size:18px;
+      color: red;
+    }
+    .other{
+      margin-top:0.32rem;
+      .icon{
+        width: 14px;
+        height: 15px;
+        display: inline-block;
+        background: url("../images/comment.svg") no-repeat center;
+        margin-right:4px;
+        vertical-align: middle;
+      }
+    }
+    .comment{
+      .fr();
+      margin-right:0.4rem;
+    }
+  }
+}
+
+
+
+
+
+
+//尾部
+.foot {
+  height: 243/50rem;
+  .foot_login {
+    height: 66/50rem;
+    margin-top: 50/50rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+    a {
+      display: block;
+      width: 100%;
+      line-height: 66/50rem;
+      text-align: center;
+    }
+    .register {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .login {
+      width: 30%;
+      height: 67/50rem;
+      border-right: 1px solid #ccc;
+      .fl();
+      box-sizing: border-box;
+    }
+    .back {
+      width: 40%;
+      height: 67/50rem;
+      .fl();
+      box-sizing: border-box;
+      position: relative;
+      img {
+        width: 28/50rem;
+        height: 29/50rem;
+        .center-y();
+        left: 60/50rem;
+
+      }
+    }
+  }
+  .baseline {
+    background-color: #fff;
+    font-size: 14px;
+    height: 124/50rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 34/50rem;
+    padding-bottom: 34/50rem;
+    .download {
+      color: red;
+    }
+    .phone {
+      color: #000;
+    }
+    span {
+      color: #ccc;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

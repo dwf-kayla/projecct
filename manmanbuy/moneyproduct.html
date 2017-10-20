@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国内折扣</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<body>
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="index.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2> 国内折扣 </h2></div>
+</header>
+
+<!--产品区域-->
+<section class="products">
+    <div class="box">
+        <!--<div class="title">-->
+        <!--<h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>-->
+        <!--<p>10.9元</p>-->
+        <!--<div class="infos">-->
+        <!--<span class="mall">京东商城</span>-->
+        <!--<span class="time">10-25 14:10</span>-->
+        <!--<span class="author">小编烟火 / 慢慢买</span>-->
+        <!--<span><a href="#newcomment">有1人评论</a></span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="content">-->
+        <!--<div class="spic">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--<div class="txt">-->
+        <!--海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。-->
+        <!--</div>-->
+        <!--<div class="lpic">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="citys">-->
+        <!--<ul>-->
+        <!--<li>-->
+        <!--<a href="">-->
+        <!--<span>北京</span>-->
+        <!--<span>有货</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="link">-->
+        <!--<a href="">前往购买</a>-->
+        <!--</div>-->
+        <!--<div class="comment">-->
+        <!--<div class="tlt">发表评论</div>-->
+        <!--<div class="txt">-->
+        <!--<div class="form">-->
+        <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+        <!--<div class="express">-->
+        <!--<input type="text" value="发表">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="new">最新评论</div>-->
+        <!--<div class="list">-->
+        <!--<div class="userimg">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--<div class="content">-->
+        <!--<div class="top">-->
+        <!--<span class="left">赶鸭子上架</span>-->
+        <!--<span class="right">2016/10/25 14:18:45</span>-->
+        <!--</div>-->
+        <!--<div class="bottom">比超市便宜了几块</div>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--</div>-->
+
+    </div>
+</section>
+
+<!--面包屑导航-->
+<section class="bread">
+    <ul>
+        <li><a href="index.html">首页 ></a></li>
+        <li><a href="moneyctrl.html">超值推荐 > </a></li>
+        <li><a href="javascript:;">移动端凑单品：海天 鲜味 生抽 1.28L</a></li>
+    </ul>
+</section>
+
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+
+<!--产品模板-->
+<script type="text/template" id="tpl">
+    {{each result}}
+    <div class="title">
+        <h3>{{$value.productName}}</h3>
+        <p>{{$value.productPinkage}}</p>
+        <div class="infos">
+            <span class="mall">{{$value.productFrom
+}}</span>
+            <span class="time">{{$value.productTime}}</span>
+            <span class="author">{{$value.productTips}}</span>
+            <span><a href="#newcomment">{{$value.productComCount}}</a></span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="spic">
+            {{#$value.productImgSm}}
+        </div>
+        <div class="txt">
+           {{$value.productInfo}}
+        </div>
+        <div class="lpic">
+            {{#$value.productImgLg}}
+        </div>
+    </div>
+    <div class="citys">
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<a href="">-->
+                    {{#$value.productCity}}
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    </div>
+    <div class="link">
+        <a href="">前往购买</a>
+    </div>
+    <div class="comment">
+        <!--<div class="tlt">发表评论</div>-->
+        <!--<div class="txt">-->
+            <!--<div class="form">-->
+                <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+                <!--<div class="express">-->
+                    <!--<input type="text" value="发表">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="new">最新评论</div>-->
+        <!--<div class="list">-->
+            <!--<div class="userimg">-->
+                <!--<img src="" alt="">-->
+            <!--</div>-->
+            <!--<div class="content">-->
+                <!--<div class="top">-->
+                    <!--<span class="left">赶鸭子上架</span>-->
+                    <!--<span class="right">2016/10/25 14:18:45</span>-->
+                <!--</div>-->
+                <!--<div class="bottom">比超市便宜了几块</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        {{#$value.productComment}}
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script><script src="js/moneyproduct.js"></script>
+</body>
+</html>

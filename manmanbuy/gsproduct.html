@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+<!--头部-->
+<header class="head">
+    <div class="left">
+        <a href="index.html"><img src="images/icback.svg" alt=""></a>
+    </div>
+    <div class="right"><img src="images/header_app.png" alt=""></div>
+    <div class="center"><h2> 凑单品 </h2></div>
+</header>
+
+<!--中间部分-->
+<section class="productsWrap">
+    <!--tab栏-->
+    <div class="tab">
+        <div class="right">
+            <img src="images/search-icon.png" alt="">
+        </div>
+        <div class="leftArea">
+            <ul>
+                <li class="shop">京东<i></i></li>
+                <li class="area">华北<i></i></li>
+                <li class="all">全部价格<i></i></li>
+            </ul>
+        </div>
+        <div class="allprice"><span class="on">全部价格</span></div>
+
+        <!--下拉框一-->
+        <div class="item shopList">
+            <!--<li><a href="javascript:;">京东</a></li>-->
+        </div>
+        <!--下拉框一的模板-->
+        <script type="text/template" id='tpl'>
+            {{each result}}
+            <li data-shopid="{{$value.shopId}}"><a href="javascript:;">{{$value.shopName}}</a></li>
+            {{/each}}
+        </script>
+
+
+
+        <!--下拉框二-->
+        <div class="item areaList">
+            <!--<li><a href="javascript:;">华北（北京、山西等）</a></li>-->
+        </div>
+        <!--下拉框二的模板-->
+        <script type="text/template" id='tpl2'>
+            {{each result}}
+            <li data-areaid="{{$value.areaId}}"><a href="javascript:;">{{$value.areaName}}</a></li>
+            {{/each}}
+        </script>
+
+    </div>
+
+
+
+    <!--中间产品-->
+    <div class="products">
+        <ul class="proItem">
+            <!--<li>-->
+                <!--<a href="">-->
+                    <!--<div class="pic">-->
+                        <!--<img src="" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="txt">廿一客(21cake)专用餐具 1人份(不单独配送)</div>-->
+                    <!--<div class="price">¥0.50 <button>去凑单</button></div>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+</section>
+
+
+<!--尾部-->
+<section class="foot">
+    <div class="foot_login">
+        <ul class="clearfix">
+            <li class="register"><a href="">注册</a></li>
+            <li class="login"><a href="">登录</a></li>
+            <li class="back"><a href=""><img src="images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="baseline">
+        <a href="" class="download">手机APP下载</a>
+        <a href="" class="phone">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+        <p>手机APP下载</p>
+    </div>
+</section>
+
+
+<!--中间产品的模板-->
+<script type="text/template" id="proTpl">
+    {{each result}}
+    <li>
+        <a href="">
+            <div class="pic">
+                <img src="{{$value.productImg}}" alt="">
+            </div>
+            <div class="txt">{{$value.productName}}</div>
+            <div class="price">{{$value.productPrice}} <button>去凑单</button></div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>
